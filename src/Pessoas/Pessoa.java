@@ -1,9 +1,11 @@
 package Pessoas;
 
+import Composicao.Endereco;
+
 public class Pessoa {
     private String nome;
     private String dataNascimento;
-    private String endereco;
+    private Endereco endereco;
     private String telsContato;
 
     public void cadastrar() {
@@ -11,7 +13,7 @@ public class Pessoa {
     }
 
     public int obterIdade() {
-        int idade;
+        int idade = 0;
         // calculo de idade: ano atual - data de nascimento
         return idade;
     }
@@ -32,11 +34,11 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(String endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 
