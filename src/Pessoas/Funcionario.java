@@ -2,21 +2,23 @@ package Pessoas;
 
 import Composicao.Endereco;
 
+import java.time.LocalDate;
+
 public class Funcionario extends Pessoa{
     private int matricula;
     private String cargo;
     private double salario;
     private String dataAdmissao;
 
-    public void cadatrar(int matricula, String cargo,
+    public void cadastrar(int matricula, String cargo,
                          double salario, String dataAdmissao,
-                         String nome, String dataNascimento,
+                         String nome, LocalDate dataNascimento,
                          Endereco endereco, String telsContato) {
         this.matricula = matricula;
         this.cargo = cargo;
         this.salario = salario;
         this.dataAdmissao = dataAdmissao;
-        cadatrar(nome, dataNascimento, endereco, telsContato);
+        cadastrar(nome, dataNascimento, endereco, telsContato);
     }
 
     public void reajustarSalario(double percentual) {

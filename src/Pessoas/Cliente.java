@@ -2,16 +2,18 @@ package Pessoas;
 
 import Composicao.Endereco;
 
+import java.time.LocalDate;
+
 public class Cliente extends Pessoa{
     private String codigo;
     private String profissao;
 
     public void cadastrar(String codigo, String profissao,
-                         String nome, String dataNascimento,
+                         String nome, LocalDate dataNascimento,
                          Endereco endereco, String telsContato) {
         this.codigo = codigo;
         this.profissao = profissao;
-        cadatrar(nome, dataNascimento, endereco, telsContato);
+        cadastrar(nome, dataNascimento, endereco, telsContato);
     }
 
     public String getCodigo() {
