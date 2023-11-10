@@ -1,17 +1,31 @@
 package Pessoas;
 
-public class Funcionario extends Pessoa {
+import Composicao.Endereco;
+
+public class Funcionario extends Pessoa{
     private int matricula;
     private String cargo;
     private double salario;
     private String dataAdmissao;
 
-    public void reajustarSalario (double percentual) {
-
+    public void cadatrar(int matricula, String cargo,
+                         double salario, String dataAdmissao,
+                         String nome, String dataNascimento,
+                         Endereco endereco, String telsContato) {
+        this.matricula = matricula;
+        this.cargo = cargo;
+        this.salario = salario;
+        this.dataAdmissao = dataAdmissao;
+        cadatrar(nome, dataNascimento, endereco, telsContato);
     }
 
-    public void promover (String cargo) {
+    public void reajustarSalario(double percentual) {
+        double acrescimo = 1 + (percentual/100);
+        this.salario = this.salario * acrescimo;
+    }
 
+    public void promover(String novoCargo) {
+        this.cargo = novoCargo;
     }
 
     public int getMatricula() {
@@ -22,27 +36,19 @@ public class Funcionario extends Pessoa {
         this.matricula = matricula;
     }
 
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
     public String getDataAdmissao() {
         return dataAdmissao;
     }
 
     public void setDataAdmissao(String dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public double getSalario() {
+        return salario;
     }
 }

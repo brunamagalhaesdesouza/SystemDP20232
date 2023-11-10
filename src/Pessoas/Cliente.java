@@ -1,9 +1,18 @@
 package Pessoas;
 
-public class Cliente extends Pessoa{
+import Composicao.Endereco;
 
+public class Cliente extends Pessoa{
     private String codigo;
     private String profissao;
+
+    public void cadastrar(String codigo, String profissao,
+                         String nome, String dataNascimento,
+                         Endereco endereco, String telsContato) {
+        this.codigo = codigo;
+        this.profissao = profissao;
+        cadatrar(nome, dataNascimento, endereco, telsContato);
+    }
 
     public String getCodigo() {
         return codigo;

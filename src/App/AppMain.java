@@ -1,14 +1,17 @@
 package App;
 
-import Pessoas.Pessoa;
+import Composicao.Endereco;
+import Pessoas.Cliente;
+import Pessoas.Funcionario;
 
 public class AppMain {
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+        Funcionario func1 = new Funcionario();
+        Cliente cli1 = new Cliente();
+        Endereco end1 = new Endereco();
 
-        Pessoa pessoa1 = new Pessoa();
-        pessoa1.getEndereco().getCep();
-
+        cli1.cadastrar("mat01", "Programadora", "Bruna", "01/01/2000",
+                end1, "0817236197236");
     }
 }

@@ -8,13 +8,17 @@ public class Pessoa {
     private Endereco endereco;
     private String telsContato;
 
-    public void cadastrar() {
-
+    public void cadatrar(String nome, String dataNascimento,
+                         Endereco endereco, String telsContato) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.endereco = endereco;
+        this.telsContato = telsContato;
     }
 
     public int obterIdade() {
         int idade = 0;
-        // calculo de idade: ano atual - data de nascimento
+        //Calculo de Ano atual - ano de nascimento;
         return idade;
     }
 
@@ -32,14 +36,6 @@ public class Pessoa {
 
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
 
     public String getTelsContato() {
